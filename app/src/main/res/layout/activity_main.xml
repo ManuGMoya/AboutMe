@@ -19,11 +19,47 @@
         app:layout_constraintTop_toTopOf="parent"
         style="@style/nameStyle" />
 
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/ed_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/what_is_your_nickname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+    
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/layout_margin"
+        app:layout_constraintStart_toStartOf="@id/ed_name"
+        app:layout_constraintEnd_toEndOf="@id/ed_name"
+        app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_padding"
+        android:background="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/btn_done"
+        android:textAlignment="center"
+        style="@style/nameStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        />
+
     <ImageView
         android:id="@+id/star_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_nickname"
         app:layout_constraintStart_toStartOf="@id/tv_name"
         app:layout_constraintEnd_toEndOf="@id/tv_name"
         app:srcCompat="@android:drawable/btn_star_big_on"
